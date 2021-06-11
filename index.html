@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/KePixel (1).png" />
+    <title>Contacto</title>
+    <style>
+        *{
+          box-sizing: border-box;
+          margin: 0px;
+          list-style:none;
+        } 
+        body{
+          background-color: rgb(63, 5, 5);
+        }
+
+        [class*='col-']{
+          float:left;
+          padding-left: 15px;
+          padding-right:15px;
+          padding-bottom: 15px;
+        }
+        /*celulares*/
+        .col-1{width: 8.33%;}
+        .col-2{width: 16.66%;}
+        .col-3{width: 25%;}
+        .col-4{width: 33.33%;}
+        .col-5{width: 41.66%;}
+        .col-6{width: 50%;}
+        .col-7{width: 58.33%;}
+        .col-8{width: 66.66%;}
+        .col-9{width: 75%;}
+        .col-10{width: 83.33%;}
+        .col-11{width: 91.66%;}
+        .col-12{width: 100%;} 
+        .compu{
+          display:none;
+        }
+        .cel{
+          display: block;
+          
+        }
+        
+        nav{
+          position: fixed;
+          color:white;
+          height: 70px;       
+          background-color: black;
+          text-align: right;
+          box-shadow: 0 0 10px red;
+          margin:0px;
+          width:100%;
+        } 
+        
+        .imagen1{
+          float:right;
+          width: 90px;
+          height: auto;
+          margin-top: 0px;
+          background-color: black;
+        }
+        .opciones{
+            display:none;
+        }
+        .navi a{
+            text-decoration: none;
+            color: white;
+        }
+        .navi2{
+            float:left;
+            background-color: black;
+            display:block;
+            border:1px solid transparent;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            text-shadow: 0px 0px 15px white;
+            text-transform: uppercase;
+
+            font-size: 2vh;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: left;
+            
+        }
+        .navi2 ul li{
+            float:left;
+            background:rgb(180, 57, 57);
+            display: block;
+            text-align: center;
+            border:1px solid transparent;
+            padding: 10px 10px;
+            text-shadow: 0px 0px 15px white;
+            text-transform: uppercase;
+            border-radius: 35px;
+            margin-top:5px;
+            width: 170px;
+            font-size:15px;
+        }
+        .navi2:hover {
+            background-color:white;
+            color:black;
+            text-shadow: 0px 0px 15px rgb(180, 57, 57);
+            border-radius: 35px;
+        }
+        .navi2:hover > a{
+            color:black;
+
+        }
+        .navi2 ul{
+            display:none;
+            position:absolute;
+            min-width:140px;
+        }
+        .navi2:hover > ul {
+            display:block;
+            margin-right:90px;
+            margin-top: 30px
+        }
+        .contacto2{
+            margin-left:auto;
+            margin-right: auto;
+            color: white;
+            box-shadow: 0 0 20px white;
+            background-color: black;
+        }
+        .ima{
+            margin-left: auto;
+            margin-right: auto;
+            float:initial;
+          }
+        .ima img{
+            width:100%;
+            height:auto;
+            background-color: black;
+        }    
+        .contacto2 p{
+            text-align: center;
+            font-size: 2vh;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold; 
+        }
+        .row{
+            padding-top:100px;
+            width:80%;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+          color:rgba(255, 255, 255, 0.877);
+          padding:20px;
+          text-align: center;
+          background-color: transparent;
+          width:100%;
+          font-size: 20px;
+          
+        }
+        input{
+          padding:20px;
+          border:none;
+          outline: none;
+          border-bottom: 1px solid red;
+          background-color: transparent;
+          color:white;
+          font-size: medium;
+          width:100%;
+        }
+        select{
+          padding:20px;
+          border:none;
+          border-bottom: 1px solid red;
+          color:white;
+          background-color: transparent;
+          width: 100%;
+          font-size: medium;
+        }
+        label{
+          color:white;
+          font-family: Berlin Sans FB;
+        }
+        .compu{
+          background-color: rgba(236, 85, 85, 0.692);
+          color:white;
+          outline: none;
+          justify-content: center;
+          display:block;
+        }
+        .cel{
+          display:none;
+        }
+        input[type=submit]{
+          border-radius: 30px;
+          padding:20px;
+          background-color: rgb(204,60,60);
+          width:70%;
+          height:50px;
+          cursor: pointer;
+          margin-left: 15%;
+          
+        }
+        input[type=submit]:active{
+          background-color: red;
+        }
+        
+        .uno{
+          background-color: rgba(70, 70, 70, 0.808);
+        }
+        .dos{
+          height:150px;
+        }
+        p{
+          color:white;
+          background-color:transparent ;
+          font-family: Berlin Sans FB;
+          width:100%;
+          justify-content: left;
+          
+        }
+        label[for=op] {
+          margin-left: 45%;
+        }
+        .uno img{
+          width:100%;
+          float:initial;
+          height: auto;
+          margin-left:auto;
+          margin-right:auto;
+        }
+        .bajo{
+          padding:none;
+          justify-content: left;
+          width:100%;
+        }
+        h2{
+          font-size: 30px;
+          padding:10px;
+          color:white;
+          text-align: center;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        .contenido1{
+            padding-bottom:100px;
+        }
+        
+        .tab{
+          color:white;
+        } 
+        textarea{
+          outline: none;
+          width:100%;
+        }
+         /*pc*/
+        @media only screen and (min-width:768px){
+          .col-g-1{width: 8.33%;}
+          .col-g-2{width: 16.66%;}
+          .col-g-3{width: 25%;}
+          .col-g-4{width: 33.33%;}
+          .col-g-5{width: 41.66%;}
+          .col-g-6{width: 50%;}
+          .col-g-7{width: 58.33%;}
+          .col-g-8{width: 66.66%;}
+          .col-g-9{width: 75%;}
+          .col-g-10{width: 83.33%;}
+          .col-g-11{width: 91.66%;}
+          .col-g-12{width: 100%;} 
+          nav{
+            position:fixed;
+            color:white;
+            height: 80px;
+            text-align: right;
+            box-shadow: 0 0 10px red;
+            background-color: black;
+          }
+          .opciones{
+            display:block
+          }
+
+          nav a{
+            text-decoration: none;
+            color: rgb(180, 57, 57);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            display: inline-block;
+            padding:25px 15px;
+            text-transform: uppercase;
+            text-shadow: 0px 0px 15px white;
+          }
+          nav a:hover{
+            border-radius: 35px;
+            background-color: white;
+            color: black;
+            text-shadow: 0px 0px 15px rgb(180, 57, 57);
+          }  
+          .navi{
+            display:none;
+          }
+          .imagen1{
+            float:left;
+            width: 90px;
+            height: auto;
+            margin-top: 5px;
+            background-color: black;
+          }        
+          .row{
+            padding-top:100px;
+            width:80%;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: Arial, Helvetica, sans-serif;
+
+          }
+          h1{
+            color:rgba(255, 255, 255, 0.877);
+            padding:30px;
+            text-align: center;
+            background-color: transparent;
+            margin-top:0%;
+          }
+          input{
+            padding:20px;
+            border:none;
+            outline: none;
+            border-bottom: 1px solid red;
+            background-color: transparent;
+            color:white;
+            font-size: medium;
+          }
+          select{
+            padding:20px;
+            border:none;
+            border-bottom: 1px solid red;
+            color:white;
+            background-color: transparent;
+            width: 235px;
+            font-size: medium;
+
+          }
+          label{
+            color:white;
+            background-color: rgba(70, 70, 70, 0.808);
+            font-family:  Berlin Sans FB;
+          }
+          .compu{
+            background-color: rgba(236, 85, 85, 0.692);
+            color:white;
+            outline: none;
+            justify-content: center;
+            display:block;
+          }
+          .cel{
+            display:none;
+          }
+          input[type=submit]{
+            border-radius: 30px;
+            padding:20px;
+            background-color: rgb(204,60,60);
+            width:200px;
+            height:50px;
+            cursor: pointer;
+            margin-left: 40%;
+            
+          }
+          input[type=submit]:active{
+            background-color: red;
+          }
+          
+          .uno{
+            background-color: rgba(70, 70, 70, 0.808);
+          }
+          .dos{
+            height:150px;
+          }
+          p{
+            color:white;
+            background-color:transparent ;
+            font-family:  Berlin Sans FB;
+            
+          }
+          label[for=op] {
+            margin-left: 45%;
+          }
+          .uno img{
+            width:120px;
+            height:120px;
+            margin-left:45%;
+            background-color: transparent;
+          }
+          .bajo{
+            padding:100px;
+            justify-content: left;
+          }
+          h2{
+            font-size: 30px;
+            padding:10px;
+            color:white;
+            text-align: center;
+            text-shadow: 0 0 20px rgb(226, 85, 85);
+            font-family: Arial, Helvetica, sans-serif;
+          }
+          .tab{
+            color:white;
+            font-family:  Berlin Sans FB;
+          }
+          textarea{
+            width:100%;
+          }
+          .contenido1{
+            padding-bottom:100px;
+          }
+          .contacto2{
+            margin-left:auto;
+            margin-right: auto;
+            color: white;
+            box-shadow: 0 0 20px white;
+            background-color: black;
+          }
+          .ima{
+            margin-left: auto;
+            margin-right: auto;
+            float:initial;
+          }
+          .ima img{
+            width:100%;
+            height:auto;
+          }
+          .contacto2 p{
+            text-align: center;
+            font-size: 2vh;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold; 
+            float:initial;
+          }  
+        }
+       
+    </style>
+</head>
+<body>
+    <nav class="col-12 col-m-12 col-g-12">
+        <img src="img/KePixel (1).png" class="imagen1">
+        <div class="opciones">
+          <a href="desarrollo-apps.html">Desarrollo de Apps</a>
+          <a href="diseño-web.html">Tiendas/Paginas Online</a>
+          <a href="index.html">Home</a>
+        </div>
+          <ul class="navi">
+            <li class="navi2"><a href="">¿Qué Necesita?</a>
+                <ul>
+                  <li class="navi3"><a href="desarrollo-apps.html">Desarrollo de Apps</a><br></li>
+                  <li class="navi4"><a href="diseño-web.html">Paginas Online</a><br></li>
+                  <li class="navi5"><a href="index.html">Home</a></li>
+                </ul>
+           </li>   
+    </nav>
+    <div class="row">
+      <div class="col-12">
+        <div class="col-12 uno">
+          <img src="img/e-mail.png" class="image">
+        </div>
+        <div class="col-12 uno">
+          <h1>CONSULTA CON UN EXPERTO</h1>
+        </div>
+        <div class="col-12 uno">
+          <p>Especifique todos los detalles posibles para realizar un estudio de viabilidad del proyecto.</p>
+        </div>
+        <div class="col-12 col-g-6 uno">
+          <label for="name"> Nombre:</label><br>
+          <input type="text" id="name" name="name" >
+        </div>
+
+        <div class="col-12 col-g-6 uno">
+          <label for="email"> E-mail:</label><br>
+          <input type="email" id="correo" name="correo" >
+        </div>
+        <div class="col-12 col-g-6 uno">
+          <label for="numero"> Telefono:</label><br>
+          <input type="number" id="numero" name="numero" >
+        </div>
+        <div class="col-12 col-g-6 uno">
+          <label for="metodo"> ¿Que necesitas?</label><br>
+          <select name="metodo">
+            <option value="01">Pagina Web Corporativa</option>
+            <option value="02">Tienda Online</option>
+            <option value="03">Aplicacion</option>
+            <option value="04">Desarrollo de web a media</option>
+            <option value="05">Optimizacion:SEO,Velocidad web</option>
+            <option value="06">Otros..</option>
+          </select>
+        </div> 
+        <div class="col-12 col-g-12 uno dos">
+          <label for="op"> Consulta:</label><br>
+          <textarea name="op" id="op" rows="8"  class="compu"></textarea>
+          <textarea name="op" id="op" rows="6"  class="cel"></textarea>
+        </div>
+        <div class="col-12 uno">
+          <input type="submit" value="Enviar">
+        </div>
+        
+      </div>
+    </div>
+    <div class="bajo">
+      <div class="col-12 col-g-12">
+        <h2>Presupuesto de App</h2>
+      </div>
+      <div class="col-12 col-g-12">
+        <p>No existe un presupuesto para crear una app exacto, sin previo estudio. Para conocer el coste de una aplicación móvil en android o iPhone detallado, comenzamos con el estudio personalizado de la idea de cada cliente. Todas las apps web son diferentes, por lo que es necesario detallar todas y cada una de las aplicaciones o funciones que llevaría su proyecto web y nuestro equipo de programadores revisará cada punto.</p>
+        <p>Para hacerte una idea de cuanto cuesta una app móvil desarrollado para Android e iOS:</p>
+        <p></p><br>
+       <ol class="tab">
+         <li>Desarrollo App multiplataforma.</li>
+         <li>Desarrollo App con Flutter.</li>
+         <li>Desarrollo App Nativo.</li>
+         <li>Desarrollo App Nativo con conexiones API y paneles de control.</li>
+       </ol>
+      </div>
+      <div class="col-12 col-g-12">
+        <h2>¿Cuanto cuesta diseñar una pagina web?</h2>
+        <p>No existe un presupuesto para diseñar una página web, sin previo estudio. Para estimar el precio de una página web, comenzamos con el estudio personalizado de la idea de cada cliente. Todas las páginas web son diferentes, por lo que es necesario detallar las secciones y funciones que necesitará la empresa. Desde nuestra agencia AppDesign estudiaremos cada punto para estimar el mejor precio-calidad.
+
+          Para hacerte una idea de cuanto cuesta desarrollar una página web:</p>
+          <p></p><br>
+          <ol class="tab">
+            <li>Diseño web básico Landing Page.</li>
+            <li>Diseño y desarrollo web WordPress.</li>
+            <li>Diseño de Tienda Online.</li>
+            <li>Desarrollo de plataformas.</li>
+            <li>Diseño y desarrollo web a medida con React JS, Java, Bootstrap.</li>
+          </ol>
+      </div>
+      <div class="col-12 col-g-12 contenido1">
+        <h2>¿Cuánto cuesta una app?</h2>
+        <p>El precio de una app dependerá del tiempo que nos lleve realizar cada una de las partes y la dificultad de este, no es lo mismo programar las mismas funciones en html5, css o código para aplicaciones móviles, ya sea para iOS, android o windows phone.
+
+          Una vez tengamos la idea del cliente, con alguna web similar que te guste y todas las partes que llevaría, realizamos una cotización aproximada del precio.
+          
+          Te enviaremos todos los detalles desglosados por email, además de recomendaciones para mejorar tu sitio web con los costes que llevaría.</p>
+      </div>
+    </div>
+
+
+
+    <div class="col-12 col-m-12 col-g-12 contacto2">
+        <div class="col-4 col-m-12 col-g-2 ima">
+            <img src="img/KePixel (1).png">
+        </div>
+        <p class="col-12 col-g-12 texto">Agencia de Diseño Web, Desarrollo de Aplicaciones y Software<br><br>
+          📍La Ceiba - Comayagua - SPS<br><br>
+          info@appdesign.dev<br><br>
+        +504 9603-6528</p>
+  
+    </div>
+</body>
+</html>
